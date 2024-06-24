@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,16 +7,42 @@
 </head>
 <body>
   <div class="header">
-    <a href="#default" class="logo">Tech-Blog</a>
+    <div class="logo-title">
+      <a href="#default" class="logo">Tech-Blog</a>
+    </div>
     <div class="header-right">
       <a routerLink="sign-up">Sign Up</a>
-    <a routerLink="login">Log in</a>
+      <a routerLink="login">Log in</a>
     </div>
-    
-    <a routerLink="/" routerLinkActive="active">Home</a>
+      <a routerLink="/" routerLinkActive="active">Home</a>
       <a href="#contact">Contact</a>
       <a href="#about">About</a>
-  </div>
+    </div>
   <router-outlet></router-outlet>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+</head>
+<body>
+    <header>
+        <div class="logo-title">
+            <h1>Techblog</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+                <li><a routerLink="login">Login</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
 </body>
 </html>
