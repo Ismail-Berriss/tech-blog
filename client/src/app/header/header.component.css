@@ -1,0 +1,44 @@
+header {
+    display: flex;
+    align-items: center;
+    background-color: #1e3a8a; /* Blue background for the middle and right part */
+  }
+  
+  .logo-title {
+    background-color: white; /* White background for the logo/title */
+    padding: 10px 20px;
+  }
+  
+  .logo-title h1 {
+    color: #1e3a8a; /* Blueish color for the text */
+    margin: 0;
+  }
+  
+  nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white; /* White text for the navigation links */
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    background-color: white; /* Darker blue on hover */
+    border-radius: 5px;
+    color: #1e3a8a;
+  }
+  
