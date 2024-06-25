@@ -1,12 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-admin-panel',
   standalone: true,
-  imports: [],
+  imports: [HttpClientModule],
   templateUrl: './admin-panel.component.html',
-  styleUrl: './admin-panel.component.css'
+  styleUrl: './admin-panel.component.css',
 })
-export class AdminPanelComponent {
+export class AdminPanelComponent implements OnInit, OnDestroy {
+  data: any;
+  private subscription: Subscription | undefined;
 
+  constructor(private http: HttpClient) {}
+
+  ngOnInit(): void {
+    this.verifyAdmin();
+  }
+
+  verifyAdmin() {
+    this.subscription = this.http
+      .get('http://localhost:3000/api/admin', {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`,
+        },
+      })
+      .subscribe((result) => {
+        this.data = result;
+      });
+  }
+
+  ngOnDestroy(): void {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+  }
 }
