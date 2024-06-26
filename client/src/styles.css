@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-/* Global reset for margin, padding, and box-sizing */
+/* Global reset for margin, padding, and box-sizing */ 
+/*importing normalize.css */
+@import url(./normalize.css);
+
 * {
     margin: 0;
     padding: 0;
