@@ -1,0 +1,11 @@
+SERVER_PORT=3000
+
+SALT_ROUNDS=10
+
+DB_USER="postgres"
+DB_HOST="localhost"
+DB_NAME="techblog"
+DB_PASSWORD="dbpassword"
+DB_PORT=5432
+
+JWT_SECRET="/+Nd5yKXdXuPLeaZZJVixtMi+5Juan9IrkqRh5k4TtY="
